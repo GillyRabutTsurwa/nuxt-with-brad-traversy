@@ -1,20 +1,21 @@
+// NOTEIMPORTANT: Voici le page domicile
 <template>
   <div class="container">
     <div>
       <Logo />
       <h1 class="title">
-        SEO with Nuxt
+        Dad Jokes App
       </h1>
       <div class="links">
-        <nuxt-link to="/about" class="button--green">
-          About
-        </nuxt-link>
-        <nuxt-link to="/anotherPage" class="button--green">
-          About
-        </nuxt-link>
-        <nuxt-link to="/yetAnother" class="button--green">
-          Yet Another
-        </nuxt-link>
+        <a href="https://icanhazdadjoke.com/api" target="_blank" class="button--green">
+          API Source
+        </a>
+        <a href="https://nuxtjs.org/guide" target="_blank" class="button--green">
+          Nuxt Docs
+        </a>
+        <a href="https://github.com/GillyRabutTsurwa" target="_blank" class="button--grey">
+          My GitHub
+        </a>
       </div>
     </div>
   </div>
@@ -40,7 +41,9 @@ export default {
 <style>
 .container {
   margin: 0 auto;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  height: 91vh;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
