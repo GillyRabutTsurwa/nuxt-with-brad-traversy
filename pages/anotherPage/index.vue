@@ -4,7 +4,18 @@
 
 <script>
 export default {
-
+  head() {
+    return {
+      title: "Autre Page",
+      meta: [
+        {
+          hid: "description",
+          name: "another-page",
+          content: "another page"
+        }
+      ]
+    }
+  }
 }
 </script>
 

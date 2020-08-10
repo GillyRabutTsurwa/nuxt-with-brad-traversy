@@ -10,7 +10,18 @@
 
 <script>
 export default {
-    
+  head() {
+    return {
+      title: "À Propos",
+      meta: [
+        {
+          hid: "description",
+          name: "about-page",
+          content: "about"
+        }
+      ]
+    }
+  }
 }
 </script>
 

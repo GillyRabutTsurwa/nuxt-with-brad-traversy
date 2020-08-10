@@ -3,7 +3,7 @@
     <div>
       <Logo />
       <h1 class="title">
-        Links with Nuxt
+        SEO with Nuxt
       </h1>
       <div class="links">
         <nuxt-link to="/about" class="button--green">
@@ -21,7 +21,20 @@
 </template>
 
 <script>
-export default {}
+export default {
+  head() {
+    return {
+      title: "Domicile",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Dad Jokes Home Page"
+        }
+      ]
+    }
+  }
+}
 </script>
 
 <style>
