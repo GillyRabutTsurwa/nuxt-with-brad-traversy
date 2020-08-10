@@ -3,15 +3,18 @@
     <div>
       <Logo />
       <h1 class="title">
-        bad-dad-jokes-app
+        Links with Nuxt
       </h1>
       <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" rel="noopener noreferrer" class="button--green">
-          Documentation
-        </a>
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank" rel="noopener noreferrer" class="button--grey">
-          GitHub
-        </a>
+        <nuxt-link to="/about" class="button--green">
+          About
+        </nuxt-link>
+        <nuxt-link to="/anotherPage" class="button--green">
+          About
+        </nuxt-link>
+        <nuxt-link to="/yetAnother" class="button--green">
+          Yet Another
+        </nuxt-link>
       </div>
     </div>
   </div>
