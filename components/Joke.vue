@@ -1,7 +1,9 @@
 <template>
-  <div class="joke">
-    {{jokeProp}}
-  </div>
+  <nuxt-link v-bind:to="`/jokes/${idProp}`">
+    <div class="joke">
+      {{jokeProp}}
+    </div>
+  </nuxt-link>
 </template>
 
 <script>
