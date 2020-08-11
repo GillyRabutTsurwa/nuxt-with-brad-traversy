@@ -1,10 +1,17 @@
 <template>
-  <h4>This is another Page</h4>
+  <div class="jokes-container">
+    <Joke v-for="currentJoke in jokes" v-bind:key="currentJoke.id" v-bind:jokeProp="currentJoke.joke" v-bind:idProp="currentJoke.id" />
+  </div>
 </template>
 
 <script>
-import axios from "@nuxtjs/axios"
+import axios from "@nuxtjs/axios";
+import Joke from "../../components/Joke";
+ 
 export default {
+  components: {
+    Joke: Joke
+  },
   data() {
     return {
       jokes: []
@@ -15,12 +22,14 @@ export default {
     try {
       // NOTEIMPORTANT: Faites attention à syntaxe peu differente pour utiliser axios avec Nuxt dessous.
       const response = await this.$axios.$get("https://icanhazdadjoke.com/search", {
-        // NOTE: On peux aussi mettre cet objet headers au-dessous de declaration axios et déclarer l'objet ici
         headers: {
           Accept: "application/json"
         }
       });
-      console.log(response);
+      // console.log(response);
+      // console.log(response.results);
+      let data = response.results;
+      this.jokes = data;
     } catch (error) {
       console.warn(error);
     }
@@ -38,7 +47,12 @@ export default {
     }
   }
 }
-</script>
+</script> 
 
 <style>
+.jokes-container {
+  margin: 0 auto;
+  text-align: center;
+  width: 75%;
+}
 </style>
