@@ -6,7 +6,7 @@
     <p class="joke-text">
       <strong>{{currentJokeObj.joke}}</strong>
     </p>
-    <figcaption>Joke: {{$route.params.id}}</figcaption>
+    <p>Joke: {{$route.params.id}}</p>
   </div>
 </template>
 
