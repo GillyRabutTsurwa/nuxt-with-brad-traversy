@@ -41,8 +41,7 @@ export default {
 <style>
 .container {
   margin: 0 auto;
-  /* min-height: 100vh; */
-  height: 91vh;
+  /* min-height: 91vh; */
   overflow: hidden;
   display: flex;
   justify-content: center;

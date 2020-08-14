@@ -26,7 +26,7 @@ export default {
           Accept: "application/json"
         }
       });
-      // console.log(response);
+      console.log(response);
       // console.log(response.results);
       let data = response.results;
       this.jokes = data;

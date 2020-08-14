@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar />
-    <Nuxt />
+    <Nuxt class="main" />
   </div>
 </template>
 
@@ -30,6 +30,10 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
+}
+
+.main {
+  min-height: 91vh;
 }
 
 .button--green {

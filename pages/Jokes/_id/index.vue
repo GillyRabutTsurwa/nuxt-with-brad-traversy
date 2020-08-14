@@ -1,8 +1,12 @@
 //TODO: Review route parametres. Stuff like $route.params.id. A bit fuzzy
 <template>
-  <div>
+  <div class="joke-id-container">
     <!-- {{$route.params.id}} -->
-    {{currentJokeObj.joke}}
+    <nuxt-link to="/jokes" class="back-2-jokes-btn button--grey">Back</nuxt-link>
+    <p class="joke-text">
+      <strong>{{currentJokeObj.joke}}</strong>
+    </p>
+    <figcaption>Joke: {{$route.params.id}}</figcaption>
   </div>
 </template>
 
@@ -15,6 +19,7 @@ export default {
         }
     },
      // NEW:
+     //TESTING: changing created to beforecreate
     async created() {
         try {
         // NOTEIMPORTANT: Faites attention à syntaxe peu differente pour utiliser axios avec Nuxt dessous.
@@ -35,4 +40,18 @@ export default {
 </script>
 
 <style>
+.joke-id-container {
+  margin: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.back-2-jokes-btn {
+  align-self: flex-start;
+  margin: 0;
+}
+.joke-text {
+  font-size: 5rem;
+}
 </style>

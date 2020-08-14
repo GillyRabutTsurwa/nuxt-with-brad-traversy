@@ -29,6 +29,19 @@ export default {
   cursor: pointer;
 }
 
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #34495e;
+  font-weight: normal;
+}
+
+a:hover,
+a:active {
+  color: #34495e;
+  font-weight: bold;
+}
+
 .joke:hover {
   border: 1.5px solid #42b883;
 }
